@@ -1,99 +1,6 @@
-/* body, html {
-    background-image: url("../images/marbleBG.jpg");
-    background-color: #cccccc;
-    background-size: cover;
+body, html {
+    background-image: url(../images/marbleBG.jpg);
 }
-#header {
-    border-bottom: 2px solid #cccccc;
-    background: #ffffff;
-}
-#name {
-    background: #4aaaa5;
-    color: #ffffff;
-    margin: 0;
-    height: 98px;
-    text-align: center;
-    margin-left: 41%;
-    padding-top: 4%;
-    padding-left: 1%;
-    padding-right: 1%;
-}
-#name h1 {
-    font-size: 2.25rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-}
-#navLinks {
-    padding-top: 2rem;
-    padding-right: 17%;
-}
-.nav-link {
-    color: #777777;
-}
-.container {
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 8rem;
-    background: #ffffff;
-    padding: 0 2rem;
-    height: 100%;
-    width: 60rem;
-}
-.subBody {
-    padding-bottom: 2rem;
-}
-#aboutMe, #portfolio, #contact {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1rem;
-    color: #4aaaa5;
-    padding: 2rem 0 1rem 0;
-    margin-top: 8rem;
-    margin-bottom: 2rem;
-    margin-right: .1rem;
-    margin-left: .1rem;
-    border-bottom: 1.5px solid #cccccc;
-}
-#aboutMe h1, #portfolio h1, #contact h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-#hr {
-    display: block;
-}
-#bioImage {
-    margin-top: .6rem;
-    margin-bottom: 2rem;
-}
-p {
-    line-height: 2.0;
-    padding-left: 1.5rem;
-}
-label {
-    color: #777777;
-}
-.form-control {
-    border-radius: 0;
-}
-.btn {
-    border-radius: 0;
-    font-size: .9rem;
-    padding: 1% 3.5%;
-    background: #4aaaa5;
-    border: none;
-    margin-top: 1.5%;
-}
-.btn, .form-control, label, p, .nav-link {
-    font-family: Arial, Helvetica, sans-serif;
-}
-#footer {
-    margin-top: 4rem;
-    border-top: 8px solid #4aaaa5;
-    background: #666666;
-    color: #cccccc;
-    font-size: .6rem;
-} */
-
-
 .btn, .form-control, label, p, .nav-link {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -105,11 +12,15 @@ label {
 .form-control {
     border-radius: 0;
 }
+.my-container {
+    width: 70%;
+    margin: auto;
+}
 .subBody {
-    margin: 0 auto;
-    width: 80%;
     margin-top: 10%;
     margin-bottom: 15%;
+    background-color: #fff;
+    padding: 3%;
 }
 #header {
     padding-left: 10%;
@@ -119,11 +30,14 @@ label {
 }
 #aboutMe, #portfolio, #contact {
     color: #4aaaa5;
+    margin-bottom: 3%;
+    border-bottom: 1px solid #ccc;
+    width: 80%;
+    margin-left: 0;
 }
 h1 {
-    margin-left: 2%;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 32px;
+    font-size: 28px;
 }
 .name {
     background: #4aaaa5;
@@ -131,7 +45,7 @@ h1 {
     width: fit-content;
     padding: 2%;
     text-align: center;
-    margin: 0 auto;
+    margin: auto;
 }
 .nav {
     padding-top: 5%;
@@ -141,8 +55,47 @@ h1 {
     text-decoration: none;
     font-size: 16px;
 }
-.bioImage1, .bioImage2 {
-    margin: 0 auto;
+.nav-link:hover {
+    color: #4aaaa5;
+    border: 1px dashed #4aaaa5;
+}
+.nav-link:active {
+    color: #777;
+    font-weight: bolder;
+    border: none;
+}
+#bioImage img {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+.bio p {
+    margin-top: 10%;
+    text-align: justify;
+}
+.bio p, label {
+    font-size: 16px;
+}
+.card {
+    width: 18rem;
+    height: 12rem;
+    margin-bottom: 5%;
+}
+.card-body {
+    background: #4aaaa5;
+    text-align: center;
+    color: #fff;
+    padding: 2%;
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    top: 70%;
+}
+.card img {
+    overflow: hidden;
+}
+.card-text{
+    font-size: 120%;
 }
 #footer {
     background: #666;
@@ -153,7 +106,7 @@ h1 {
 
 
 /* mobile version */
-@media only screen and (max-width: 640px){
+@media only screen and (max-width: 1250px){
     body, html {
         font-size: 75%;
     }
@@ -164,15 +117,32 @@ h1 {
         margin: 0 auto;
         padding-bottom: 3%;
     }
-    .justify-content-end {
-        justify-content: center!important;
+    #portfolio, #aboutMe, #contact {
+        margin: auto;
+        margin-bottom: 3%;
     }
     #name {
         text-align: center;
+        padding: 5%;
+    }
+    .card-text{
+        font-size: 200%;
+    }
+    /*bootstrap stylesheet _flex.scss used "!important"*/
+    .justify-content-end {
+        justify-content: center!important;
+    }
+    .card {
+        width: 100%;
     }
 }
-/* #portIcons::after {
-    content:"";
-    display: block;
-    clear: both;
-} */
+@media only screen and (max-width: 770px) {
+    #bioImage img {
+        width: 60%;
+        margin-left: 20%;
+        height: 90%;
+    }
+    .subBody {
+        margin-bottom: 20%;
+    }
+}
