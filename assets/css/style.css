@@ -46,6 +46,10 @@ h1 {
     padding: 2%;
     text-align: center;
     margin: auto;
+    -webkit-animation-name: example;
+    -webkit-animation-duration: 8s;
+    animation-name: example;
+    animation-duration: 8s;
 }
 .nav {
     padding-top: 5%;
@@ -104,8 +108,17 @@ h1 {
     font-size: 12px;
 }
 
+/* Animation - changes Name BG color */
+@-webkit-keyframes example {
+    from {background-color: #4aaaa5;}
+    to {background-color: #777;}
+  }
+@keyframes example {
+    from {background-color: #4aaaa5;}
+    to {background-color: #777;}
+  }
 
-/* mobile version */
+/* Media Queries */
 @media only screen and (max-width: 1250px){
     body, html {
         font-size: 75%;
